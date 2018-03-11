@@ -2,3 +2,4 @@ selene
 webdriver_manager
 pytest
 pytest-selenium
+pytest-reportportal
