@@ -11,7 +11,7 @@ class TestSearch:
     @pytest.mark.button
     def test_search_button_available(self):
         '''
-        test that the saerch button is available
+        test that the search button is available
         '''
         assert StartScreen().search_button.should(be.clickable)
 
@@ -19,7 +19,7 @@ class TestSearch:
     @pytest.mark.input
     def test_search_input_available(self):
         '''
-        test that the saerch input available
+        test that the search input available
         '''
         assert StartScreen().search_input.should(be.visible)
         
