@@ -1,0 +1,28 @@
+    Xpass, xfail
+    How to run 1 test method from a test class: pytest test/file.py::TestClass::test_method
+    pip install -e   - editable package
+    -k "test_name_expr"
+    -m "mark1 and not mark2"
+    -x      - exit after 1st fail
+    --tb=no    - do not show stack trace
+    -s    - print all runtime stdout prints
+    -l     - print the test local variables if fails
+    --ff   - run last failed first, and then the rest
+    --duration=Number_of_slowest_tests
+    Expecting the exception:
+        with pytest.raises(TypeError):
+		    [1] + 4
+    -r(s, f, e, x, p)    - extra summary info for the respective run status
+    id named param in parameterize 
+    ids to run tests.
+    Parametrize to classes
+    Errors in setup/fixtures are reported as Error, not as fails
+    @pytest.mark.usefixtures('my_fixture')
+    temp = tmpdir_factory.mktemp('tmp') - built in fixture
+    Parametrize fixtures with params =['tiny', 'mongo'] instead of using fixtures in parametrization.
+    tmpdir fixture - function scope
+    ! P.72 3rd line from bottom: ", and test scope fixtures" - session scope!
+    Duration of each test and fail if longer  
+    Testing std out and err with capsys
+
+
