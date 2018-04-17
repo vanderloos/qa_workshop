@@ -29,7 +29,7 @@ class TestTesla:
 
         
 @pytest.mark.parametrize('mass', [randint(0,1000000) for x in range(10)])
-class TestsParametrizedHardly:
+class TestsParametrizedMass:
     names = ['Roadster', 'Model S', 'SpaceX']  
     @pytest.mark.parametrize(('name_expected'), names)
     def test_car_name_positive(self, name_expected, mass):
