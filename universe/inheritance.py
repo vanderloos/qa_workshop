@@ -38,6 +38,3 @@ class Planet(SpaceObject):
         super().__init__(name, m, ro, o_o, r)
         self.atm = atm
         
-        
-
-        
