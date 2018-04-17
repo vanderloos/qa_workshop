@@ -1,3 +1,5 @@
+car_capacity = 4
+
 class SpaceObject():
     def __init__(self, name, m, ro, o_o, r):
                 
@@ -24,9 +26,9 @@ class Car(SpaceObject):
     def send_peeps_here(self, addnl):
         if self.population + addnl <= 0:
             self.population = 0
-        elif self.population + addnl >= 2:
-            self.population = 2
-        elif self.population + addnl < 2:
+        elif self.population + addnl >= car_capacity:
+            self.population = car_capacity
+        elif self.population + addnl < car_capacity:
             self.population = self.population + addnl
 
 class Star(SpaceObject):
