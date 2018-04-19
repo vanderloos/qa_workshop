@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = 'http://qainterview.cogniance.com/candidates'
+url = 'http://*/candidates'
 
 
 class ListCandidate:
@@ -19,9 +19,9 @@ class Candidate:
                'position': position}
         res_new_cand = requests.post(url, 
                                      headers={'content-type': 'application/json'},
+									 
                                      data=json.dumps(data) )
         return res_new_cand
-
-        
+   
     
 
