@@ -33,3 +33,25 @@ def prepare_my_ints_file():
 #     print('End of preparations.')
 #     yield
 #     print('A kind of teardown.')
+
+
+
+# @pytest.fixture(autouse=True, scope='class')
+# def prepare_my_ints_file(request):
+#     print('Conduct my preparations.')
+#     with open(r'data//text_file.txt', 'a') as file:
+#         for i in range(6):
+#             new_line = f'Line {randint(34, 42)}\n'
+#             file.writelines(new_line)
+#     print('End of preparations.')
+#
+#     def clear_file():
+#         with open(r'data//text_file.txt', 'w') as file:
+#             file.writelines('')
+#         print('Clean up the file.')
+#
+#     def say_goodbye():
+#         print("Goodbye my precious test scope!")
+#
+#     request.addfinalizer(say_goodbye)
+#     request.addfinalizer(clear_file)
