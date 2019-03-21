@@ -1,7 +1,7 @@
 import json
 
 import pytest
-import requests
+from requests import post
 
 
 def pytest_addoption(parser):
@@ -16,15 +16,14 @@ def url(request):
 
 @pytest.fixture
 def make_employee(url):
-    raise Exception("OLOLOLOO!!!!")
     def _make_employee(name, position):
         data = {"name": name,
                 "position": position
                 }
-        return requests.post(url,
-                             headers={'content-type':
-                                          'application/json'},
-                             data=json.dumps(data))\
+        return post(url,
+                    headers={'content-type':
+                             'application/json'},
+                    data=json.dumps(data))
 
     return _make_employee
 
